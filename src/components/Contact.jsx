@@ -21,10 +21,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
+        "service_1fzfebt",
         "YOUR_TEMPLATE_ID",
         form.current,
-        "YOUR_PUBLIC_KEY",
+        "template_k9vufee",
       )
       .then(() => {
         alert("Message sent successfully!");
