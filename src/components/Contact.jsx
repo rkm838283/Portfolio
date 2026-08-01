@@ -22,9 +22,9 @@ export default function Contact() {
     emailjs
       .sendForm(
         "service_1fzfebt",
-        "YOUR_TEMPLATE_ID",
-        form.current,
         "template_k9vufee",
+        form.current,
+        "vZIDG-B_9NLHHn-KT",
       )
       .then(() => {
         alert("Message sent successfully!");
