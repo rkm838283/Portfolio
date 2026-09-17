@@ -66,19 +66,9 @@ const skills = [
     color: "text-blue-500",
   },
   {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss />,
-    color: "text-cyan-400",
-  },
-  {
     name: "HTML5",
     icon: <FaHtml5 />,
     color: "text-orange-500",
-  },
-  {
-    name: "CSS3",
-    icon: <FaCss3Alt />,
-    color: "text-blue-500",
   },
   {
     name: "TensorFlow",
