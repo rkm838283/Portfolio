@@ -1,36 +1,34 @@
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaUniversity } from "react-icons/fa";
+import { FaGraduationCap, FaUniversity, FaSchool } from "react-icons/fa";
 
 const education = [
   {
-    degree: "M.Tech in Computer Science & Engineering",
+    degree: "M.Tech in Computer Science",
     institute: "National Institute of Technology Calicut",
     duration: "2025 – Present",
-    cgpa: "CGPA: --",
-    description:
-      "Specializing in Artificial Intelligence, Machine Learning, Full Stack Development, and Advanced Computer Science.",
-    courses: [
-      "Machine Learning",
-      "Distributed Systems",
-      "Computer Networks",
-      "Database Management Systems",
-      "Cloud Computing",
-      "Artificial Intelligence",
-    ],
+    score: "CGPA: 8.38",
+    icon: <FaUniversity />,
   },
   {
-    degree: "Bachelor's Degree",
-    institute: "Your University",
-    duration: "2021 – 2025",
-    cgpa: "CGPA: --",
-    description:
-      "Built a strong foundation in programming, algorithms, software engineering, and databases.",
-    courses: [
-      "Data Structures",
-      "Operating Systems",
-      "OOP",
-      "Computer Architecture",
-    ],
+    degree: "B.Tech in Computer Science",
+    institute: "Rajkiya Engineering College Kannauj, Uttar Pradesh",
+    duration: "2020 – 2024",
+    score: "CGPA: 8.38",
+    icon: <FaUniversity />,
+  },
+  {
+    degree: "Class XII",
+    institute: "RBMJ, Jaunpur, Uttar Pradesh",
+    duration: "2019",
+    score: "Percentage: 90.8%",
+    icon: <FaSchool />,
+  },
+  {
+    degree: "Class X",
+    institute: "RBMJ, Jaunpur, Uttar Pradesh",
+    duration: "2017",
+    score: "CGPA: 10",
+    icon: <FaSchool />,
   },
 ];
 
@@ -38,6 +36,7 @@ export default function Education() {
   return (
     <section id="education" className="section bg-slate-900">
       <div className="container-custom">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,11 +51,12 @@ export default function Education() {
           <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-5"></div>
 
           <p className="text-gray-400 mt-6">
-            My academic journey and relevant coursework.
+            My academic journey and educational background.
           </p>
         </motion.div>
 
-        <div className="mt-20 space-y-10">
+        {/* Education Cards */}
+        <div className="mt-20 space-y-8">
           {education.map((item, index) => (
             <motion.div
               key={index}
@@ -64,7 +64,7 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.2,
+                delay: index * 0.15,
               }}
               viewport={{ once: true }}
               whileHover={{
@@ -73,44 +73,28 @@ export default function Education() {
               className="glass rounded-3xl p-8"
             >
               <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-                <div className="flex items-center gap-4">
-                  <div className="bg-cyan-500 p-4 rounded-full text-2xl">
-                    <FaUniversity />
+                {/* Degree + Institute */}
+                <div className="flex items-center gap-5">
+                  <div className="bg-cyan-500 p-4 rounded-full text-2xl text-white">
+                    {item.icon}
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-bold">{item.degree}</h3>
+                    <h3 className="text-2xl font-bold text-white">
+                      {item.degree}
+                    </h3>
 
                     <p className="text-cyan-400 mt-2">{item.institute}</p>
                   </div>
                 </div>
 
-                <div className="mt-5 md:mt-0 text-right">
+                {/* Duration + Score */}
+                <div className="mt-5 md:mt-0 md:text-right">
                   <p className="text-gray-300">{item.duration}</p>
 
                   <p className="text-cyan-400 font-semibold mt-2">
-                    {item.cgpa}
+                    {item.score}
                   </p>
-                </div>
-              </div>
-
-              <p className="mt-6 text-gray-300 leading-8">{item.description}</p>
-
-              <div className="mt-8">
-                <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
-                  <FaGraduationCap />
-                  Relevant Coursework
-                </h4>
-
-                <div className="flex flex-wrap gap-3">
-                  {item.courses.map((course) => (
-                    <span
-                      key={course}
-                      className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm"
-                    >
-                      {course}
-                    </span>
-                  ))}
                 </div>
               </div>
             </motion.div>
