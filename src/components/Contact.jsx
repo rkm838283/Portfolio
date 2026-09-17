@@ -76,7 +76,7 @@ export default function Contact() {
 
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-400">rohit@example.com</p>
+                <p className="text-gray-400">rkm838283@gmail.com</p>
               </div>
             </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
 
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-400">+91 XXXXX XXXXX</p>
+                <p className="text-gray-400">+91 8382838825</p>
               </div>
             </div>
 
@@ -98,13 +98,13 @@ export default function Contact() {
 
               <div>
                 <h3 className="font-semibold">Location</h3>
-                <p className="text-gray-400">Kerala, India</p>
+                <p className="text-gray-400">Jaunpur,Uttar Pradesh, India</p>
               </div>
             </div>
 
             <div className="flex gap-6 text-3xl mt-6">
               <a
-                href="https://github.com/YOUR_USERNAME"
+                href="https://github.com/rkm838283"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-cyan-400 transition"
@@ -113,7 +113,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://linkedin.com/in/YOUR_USERNAME"
+                href="https://www.linkedin.com/in/rohit-maurya-5940a7231/"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-cyan-400 transition"
