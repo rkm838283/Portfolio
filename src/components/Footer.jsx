@@ -23,21 +23,21 @@ export default function Footer() {
 
           {/* Center */}
 
-          <div className="flex justify-center gap-6 text-3xl">
+          <div className="flex gap-6 text-3xl mt-6">
             <a
-              href="https://github.com/YOUR_USERNAME"
+              href="https://github.com/rkm838283"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+              className="hover:text-cyan-400 transition"
             >
               <FaGithub />
             </a>
 
             <a
-              href="https://linkedin.com/in/YOUR_USERNAME"
+              href="https://www.linkedin.com/in/rohit-maurya-5940a7231/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+              className="hover:text-cyan-400 transition"
             >
               <FaLinkedin />
             </a>
